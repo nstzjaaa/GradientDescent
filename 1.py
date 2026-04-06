@@ -33,7 +33,7 @@ m=X_train.shape[0]
 X_train=np.c_[np.ones(m), X_train]
 X_test=np.c_[np.ones(X_test.shape[0]), X_test]
 
-theta=np.zeros((X_train.shape[1],1))
+theta=np.zeros((X_train.shape[1],1)
 
 from functions import gradient_descent
 theta, cost= gradient_descent(X_train, Y_train, theta, alpha, num_iters)
