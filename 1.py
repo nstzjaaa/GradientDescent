@@ -40,7 +40,7 @@ theta, cost= gradient_descent(X_train, Y_train, theta, alpha, num_iters)
 
 y_pred=np.dot(X_test, theta)
 
-import matplotlib.pyplot  plt
+import matplotlib.pyplot as plt
 
 max_val = max(Y_test.max(), y_pred.max())
 
@@ -51,5 +51,11 @@ plt.ylabel("Wartości przewidywane")
 plt.title("Rzeczywiste vs Przewidywane")
 plt.show()
 
+ss_res = np.sum((Y_test - y_pred) ** 2)
+ss_tot = np.sum((Y_test - np.mean(Y_test)) ** 2)
 
+r2 = 1 - ss_res / ss_tot
+
+print(theta)
+print("R²:", r2)
 
