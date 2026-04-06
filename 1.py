@@ -2,6 +2,8 @@
 import numpy as np
 import pandas as pd
 import json
+
+#wczytanie danych
 data=pd.read_csv('data/insurance.csv')
 
 with open('parameters.json') as f:
